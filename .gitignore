@@ -1,0 +1,51 @@
+# 项目构建相关
+target/
+build/
+out/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# 日志文件
+*.log
+*.log.gz
+logs/
+
+# 编译和打包文件
+*.class
+*.jar
+*.war
+*.zip
+*.rar
+*.tar.gz
+
+# IDE 相关配置文件
+# STS
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+# IntelliJ IDEA
+.idea
+*.iws
+*.iml
+*.ipr
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+# VS Code
+.vscode/
+
+# 其他文件
+.DS_Store

@@ -1,0 +1,64 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/volunteer?serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: kjiolluy711
+    hikari: # 数据库连接池配置
+      idleTimeout: 60000    # 1分钟
+      maxLifetime: 1800000  # 30分钟
+      minimum-idle: 5
+      maximum-pool-size: 20
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password: kjiolluy711
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    root: INFO
+    dev.langchain4j: INFO
+  file:
+    name: logs/app.log                 # 日志文件路径
+  config: classpath:logback-spring.xml # 自定义日志框架配置文件（可选）
+
+
+langchain4j:
+  open-ai:
+    chat-model:
+      base-url: https://dashscope.aliyuncs.com/compatible-mode/v1
+      api-key: sk-e47bfe79746d4fe48adeb2afeff2240c
+      model-name: qwen-plus
+      log-requests: true
+      log-responses: true
+    streaming-chat-model:
+      base-url: https://dashscope.aliyuncs.com/compatible-mode/v1
+      api-key: sk-e47bfe79746d4fe48adeb2afeff2240c
+      model-name: qwen-plus
+      log-requests: true
+      log-responses: true
+    embedding-model:
+      base-url: https://dashscope.aliyuncs.com/compatible-mode/v1
+      api-key: sk-e47bfe79746d4fe48adeb2afeff2240c
+      model-name: text-embedding-v3
+      log-requests: true
+      log-responses: true
+      max-segments-per-batch: 10
+  community:
+    redis:
+      host: localhost
+      port: 16379
+
+
+
