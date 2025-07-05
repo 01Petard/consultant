@@ -49,3 +49,58 @@ logs/
 
 # 其他文件
 .DS_Store
+### macOS ###
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+### Logs ###
+logs/
+*.log
+*.log.*
+
+### Environment Variables ###
+.env
+.env.local
+.env.production
+.env.staging
+
+### Sensitive Configuration Files ###
+src/main/resources/application-dev.yml
+src/main/resources/application-prod.yml
+application-local.yml
+application-secret.yml
+
+### Docker ###
+.dockerignore
+
+### Database ###
+*.db
+*.sqlite
+*.sqlite3
+
+### Temporary files ###
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+### SSL Certificates ###
+ssl/
+*.pem
+*.key
+*.crt
+*.csr
+
+### Backup files ###
+*.bak
+*.backup
+
+### Test files ###
+test_stream.html
+index_fixed.html
