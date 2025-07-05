@@ -176,7 +176,7 @@
             const textarea = ref(null);
             const darkMode = ref(false);
 
-            const memoeryId = ref(Date.now().toString());
+            const memoryId = ref(Date.now().toString());
             let controller = null;
             let typingInterval = null;
             let currentTypingIndex = 0;
@@ -208,7 +208,7 @@
                 // 清空聊天记录
                 messages.value = [];
                 // 生成新的 memoryId
-                memoeryId.value = Date.now().toString();
+                memoryId.value = Date.now().toString();
                 // 添加欢迎消息
                 messages.value.push({
                     role: 'assistant',
@@ -279,7 +279,7 @@ const sendMessage = async () => {
 
     try {
         // 修改点1: 添加跨域请求配置
-        const response = await fetch(`http://localhost:8080/chat?message=${encodeURIComponent(userMessage.content)}&memoryId=${memoeryId.value}`, {
+        const response = await fetch(`http://localhost:8080/chat?message=${encodeURIComponent(userMessage.content)}&memoryId=${memoryId.value}`, {
             signal: controller.signal,
             method: 'GET',
             mode: 'cors', // 明确指定跨域请求

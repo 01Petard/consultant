@@ -2,6 +2,7 @@ package com.itheima.consultant.controller;
 
 import com.itheima.consultant.aiservice.ConsultantService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,7 +14,8 @@ public class ChatController {
     @Autowired
     private ConsultantService consultantService;
 
-    @GetMapping(value = "/chat", produces = "text/html;charset=utf-8")
+//    @GetMapping(value = "/chat", produces = "text/html;charset=utf-8")
+    @GetMapping(value = "/chat", produces = MediaType.TEXT_PLAIN_VALUE)
     public Flux<String> chat(String memoryId, String message) {
         Flux<String> result = consultantService.chat(memoryId, message);
         return result;
