@@ -279,7 +279,7 @@ const sendMessage = async () => {
 
     try {
         // 修改点1: 添加跨域请求配置
-        const response = await fetch(`http://127.0.0.1:8080/chat?message=${encodeURIComponent(userMessage.content)}&memoryId=${memoryId.value}`, {
+        const response = await fetch(`http://1.94.147.176:8080/chat?message=${encodeURIComponent(userMessage.content)}&memoryId=${memoryId.value}`, {
             signal: controller.signal,
             method: 'GET',
             mode: 'cors', // 明确指定跨域请求
