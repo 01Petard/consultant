@@ -1,6 +1,6 @@
-package com.itheima.consultant.mapper;
+package com.hzx.ai.mapper;
 
-import com.itheima.consultant.pojo.Reservation;
+import com.hzx.ai.pojo.Reservation;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;

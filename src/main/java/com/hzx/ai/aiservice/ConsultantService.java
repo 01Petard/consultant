@@ -1,4 +1,4 @@
-package com.itheima.consultant.aiservice;
+package com.hzx.ai.aiservice;
 
 import dev.langchain4j.service.MemoryId;
 import dev.langchain4j.service.SystemMessage;

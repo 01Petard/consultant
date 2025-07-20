@@ -1,7 +1,7 @@
-package com.itheima.consultant.service;
+package com.hzx.ai.service;
 
-import com.itheima.consultant.mapper.ReservationMapper;
-import com.itheima.consultant.pojo.Reservation;
+import com.hzx.ai.mapper.ReservationMapper;
+import com.hzx.ai.pojo.Reservation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

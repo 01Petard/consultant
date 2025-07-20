@@ -1,6 +1,6 @@
-package com.itheima.consultant.controller;
+package com.hzx.ai.controller;
 
-import com.itheima.consultant.service.KnowledgeBaseService;
+import com.hzx.ai.service.KnowledgeBaseService;
 import dev.langchain4j.store.embedding.EmbeddingStore;
 import jakarta.annotation.Resource;
 import org.springframework.web.bind.annotation.CrossOrigin;

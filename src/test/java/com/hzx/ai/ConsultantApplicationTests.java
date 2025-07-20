@@ -1,4 +1,4 @@
-package com.itheima.consultant;
+package com.hzx.ai;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,6 +1,6 @@
-package com.itheima.consultant.controller;
+package com.hzx.ai.controller;
 
-import com.itheima.consultant.aiservice.ConsultantService;
+import com.hzx.ai.aiservice.ConsultantService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;

@@ -1,7 +1,7 @@
-package com.itheima.consultant.tools;
+package com.hzx.ai.tools;
 
-import com.itheima.consultant.pojo.Reservation;
-import com.itheima.consultant.service.ReservationService;
+import com.hzx.ai.pojo.Reservation;
+import com.hzx.ai.service.ReservationService;
 import dev.langchain4j.agent.tool.P;
 import dev.langchain4j.agent.tool.Tool;
 import org.springframework.beans.factory.annotation.Autowired;

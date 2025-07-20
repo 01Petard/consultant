@@ -1,4 +1,4 @@
-package com.itheima.consultant.repository;
+package com.hzx.ai.repository;
 
 import dev.langchain4j.data.message.ChatMessage;
 import dev.langchain4j.data.message.ChatMessageDeserializer;

@@ -1,4 +1,4 @@
-package com.itheima.consultant.service;
+package com.hzx.ai.service;
 
 
 import dev.langchain4j.community.store.embedding.redis.RedisEmbeddingStore;

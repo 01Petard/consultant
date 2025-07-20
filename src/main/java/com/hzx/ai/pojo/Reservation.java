@@ -1,4 +1,4 @@
-package com.itheima.consultant.pojo;
+package com.hzx.ai.pojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
