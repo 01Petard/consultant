@@ -1,0 +1,11 @@
+// 部署redis
+docker run -d --name redisearch \
+  -p 6379:6379 \
+  redislabs/redisearch:latest
+
+
+// 部署pg
+docker run -d --name pgvector \
+  -p 5432:5432 \
+  -e POSTGRES_PASSWORD=pgvector \
+  ankane/pgvector:latest

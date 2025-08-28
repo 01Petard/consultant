@@ -1,0 +1,26 @@
+# 主域名 + www，自动 HTTPS
+codebox.icu, www.codebox.icu {
+    root * /var/www/star-trail/dist
+    file_server
+}
+
+# IP访问
+www.codebox.icu:8888 {
+    root * /var/www/consultant/dist
+    file_server browse
+    handle_path /api/* {
+       reverse_proxy localhost:8080
+    }
+}
+www.codebox.icu:5173 {
+    root * /var/www/heima-ai/dist
+    file_server browse
+   # handle_path /* {
+   #    reverse_proxy localhost:5174
+   # }
+}
+
+# 80端口自动跳转到 HTTPS
+http://1.94.147.176, https://1.94.147.176 {
+    redir https://codebox.icu{uri}
+}

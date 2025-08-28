@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
+ * 知识库管理
  * @author zexiao.huang
  * @since 2025/7/5 21:48
  */

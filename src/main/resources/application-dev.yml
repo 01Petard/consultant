@@ -4,37 +4,49 @@ spring:
     url: jdbc:mysql://1.94.147.176:3306/volunteer?serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true
     username: root
     password: kjiolluy711
-    hikari: # 数据库连接池配置
+    hikari:
       idleTimeout: 60000    # 1分钟
       maxLifetime: 1800000  # 30分钟
       minimum-idle: 5
       maximum-pool-size: 20
   data:
     redis:
-      host: 1.94.147.176
+      host: localhost
       port: 6379
-      password: kjiolluy711
   servlet:
     multipart:
       enabled: true
       max-file-size: 10MB
       max-request-size: 10MB
 
-
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
+
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto                      # 主键类型（自动递增）
+      logic-delete-value: 1              # 逻辑删除标记值（1 表示已删除）
+      logic-not-delete-value: 0          # 逻辑未删除标记值（0 表示未删除）
+    banner: false
+  mapper-locations: classpath:mapper/**/*.xml
 
 logging:
   level:
     root: INFO
     dev.langchain4j: INFO
+    dev.langchain4j.http.client.log.LoggingHttpClient: WARN
   file:
-    name: logs/app.log                 # 日志文件路径
-  config: classpath:logback-spring.xml # 自定义日志框架配置文件（可选）
+    name: logs/app.log
+  config: classpath:logback-spring.xml
 
 
 langchain4j:
+  community:
+    redis:
+      host: localhost
+      port: 6379
   open-ai:
     chat-model:
       base-url: https://dashscope.aliyuncs.com/compatible-mode/v1
@@ -55,10 +67,6 @@ langchain4j:
       log-requests: true
       log-responses: true
       max-segments-per-batch: 10
-  community:
-    redis:
-      host: 1.94.147.176
-      port: 16379
 
 
 

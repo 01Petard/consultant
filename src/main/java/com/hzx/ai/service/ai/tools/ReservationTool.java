@@ -1,4 +1,4 @@
-package com.hzx.ai.tools;
+package com.hzx.ai.service.ai.tools;
 
 import com.hzx.ai.pojo.Reservation;
 import com.hzx.ai.service.ReservationService;
@@ -13,6 +13,7 @@ import java.time.LocalDateTime;
 @Component
 @CrossOrigin
 public class ReservationTool {
+
     @Autowired
     private ReservationService reservationService;
 
@@ -26,7 +27,14 @@ public class ReservationTool {
             @P("考生所在省份，没有明说就不填") String province,
             @P("考生预估分数，没有明说就不填") Integer estimatedScore
     ) {
-        Reservation reservation = new Reservation(null, name, gender, phone, LocalDateTime.parse(communicationTime), province, estimatedScore);
+        Reservation reservation = Reservation.builder()
+                .name(name)
+                .gender(gender)
+                .phone(phone)
+                .communicationTime(communicationTime)
+                .province(province)
+                .estimatedScore(estimatedScore)
+                .build();
         reservationService.insert(reservation);
     }
 

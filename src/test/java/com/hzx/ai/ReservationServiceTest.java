@@ -15,13 +15,13 @@ public class ReservationServiceTest {
     //测试添加
     @Test
     void testInsert(){
-        Reservation reservation = new Reservation(null, "小王", "男", "13800000001", LocalDateTime.now(), "上海", 580);
+        Reservation reservation = new Reservation(null, "小王111", "男", "13800000001", LocalDateTime.now().toString(), "上海", 580);
         reservationService.insert(reservation);
     }
     //测试查询
     @Test
     void testFindByPhone(){
-        String phone = "13800000001";
+        String phone = "13800000002";
         Reservation reservation = reservationService.findByPhone(phone);
         System.out.println(reservation);
     }
